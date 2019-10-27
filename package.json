@@ -1,0 +1,17 @@
+{
+    "name": "deployment-next",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start -p 8080",
+        "gcp-build": "npm run build",
+        "deploy": "gcloud config set project episode-deployment && gcloud app deploy app.yaml --version=0-1-0"
+    },
+    "dependencies": {
+        "next": "9.1.1",
+        "react": "16.11.0",
+        "react-dom": "16.11.0"
+    }
+}
